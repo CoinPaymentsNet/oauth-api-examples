@@ -1,0 +1,11 @@
+version: '3'
+services:
+  coinpayments-webhooks:
+    image: busybox
+    container_name: coinpayments-webhooks
+    ports:
+      - 17000:80
+      - 10244:80
+    command: [ "httpd", "-f", "-p", "80", "-h", "/webhooks-app" ]
+    volumes:
+      - ../webhooks-app:/webhooks-app

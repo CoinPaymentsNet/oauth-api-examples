@@ -1,0 +1,32 @@
+<div class="row mb-2">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-info" disabled>GET</button>
+                <strong class="d-inline-block mb-2 text-primary">/api/v1/merchant/clients/{clientId}/webhooks</strong>
+            </div>
+            <div class="card-body">
+                <p class="card-text">List all of the webhooks for a particular client</p>
+                <button id="show-webhooks-list-button" class="btn btn-primary">Get webhooks list</button>
+            </div>
+            <div class="card-footer" id="webhooks-list-wrap">
+                <div id="webhooks-list-table" class="grid-striped">
+                    <div class="row font-weight-bold py-2">
+                        <div class="col">webhookId</div>
+                        <div class="col">notificationsUrl</div>
+                        <div class="col">notifications</div>
+                    </div>
+                    <div id="webhooks-list-body">
+                        <template id="webhooks-list-item">
+                            <div class="row py-2">
+                                <div class="col" type="webhook-id-cell"></div>
+                                <div class="col" type="notifications-url-cell"></div>
+                                <div class="col" type="notifications-cell"></div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

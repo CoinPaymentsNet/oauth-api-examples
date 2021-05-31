@@ -1,0 +1,70 @@
+<div class="row mb-2">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-success" disabled>POST</button>
+                <strong class="d-inline-block mb-2 text-primary">/api/v1/merchant/clients/{clientId}/webhooks</strong>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Create a new webhook for a client</p>
+                <div class="form-group row">
+                    <label for="create-notifications-url"
+                           class="col-sm-4 col-form-label">notificationsUrl</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="create-notifications-url"
+                               placeholder="notificationsUrl">
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">notifications</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input create-notifications" type="checkbox"
+                                       id="create['notifications']['invoiceCreated']" value="invoiceCreated">
+                                <label class="form-check-label" for="create['notifications']['invoiceCreated']">
+                                    invoiceCreated
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input create-notifications" type="checkbox"
+                                       id="create['notifications']['invoicePending']" value="invoicePending">
+                                <label class="form-check-label" for="create['notifications']['invoicePending']">
+                                    invoicePending
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input create-notifications" type="checkbox"
+                                       id="create['notifications']['invoicePaid']" value="invoicePaid">
+                                <label class="form-check-label" for="create['notifications']['invoicePaid']">
+                                    invoicePaid
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input create-notifications" type="checkbox"
+                                       id="create['notifications']['invoiceCompleted']" value="invoiceCompleted">
+                                <label class="form-check-label"
+                                       for="create['notifications']['invoiceCompleted']">
+                                    invoiceCompleted
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input create-notifications" type="checkbox"
+                                       id="create['notifications']['invoiceCancelled']" value="invoiceCancelled">
+                                <label class="form-check-label"
+                                       for="create['notifications']['invoiceCancelled']">
+                                    invoiceCancelled
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button id="create-webhook-button" class="btn btn-primary">Create webhook</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
