@@ -14,6 +14,7 @@ const webhooksApp = async () => {
     const request = new CoinPaymentsOauthRequest({
         apiBaseUrl: "https://orion-api.starhermit.com",
         identityBaseUrl: "https://orion-identity.starhermit.com",
+        identityClientId: "coinpayments-aphrodite",
         requestConfig: {
             validateStatus: false,
         }

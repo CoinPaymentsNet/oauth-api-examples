@@ -16,7 +16,7 @@ class CoinPaymentsOauthRequest {
         let client_config = {
             apiBaseUrl: config.apiBaseUrl || this.apiBaseUrl,
             identityBaseUrl: config.identityBaseUrl || this.identityBaseUrl,
-            identityClientId: config.identityClientId || "coinpayments-aphrodite",
+            identityClientId: config.identityClientId,
             identitySignInRedirectUri: config.identitySignInRedirectUri || this.currentHref,
             post_logout_redirect_uri: config.post_logout_redirect_uri || this.currentHref
         }
